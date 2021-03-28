@@ -17,52 +17,52 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="timer" id="timer-1">
-      <div class="field">
-        <span class="value" data-value="days">00</span>
-        <span class="label">Days</span>
+    <div class="bgimg">
+      <div class="timer" id="timer-1">
+        <div class="field">
+          <span class="value" data-value="days">00</span>
+          <span class="label">Days</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="field">
+          <span class="value" data-value="hours">00</span>
+          <span class="label">Hours</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="field">
+          <span class="value" data-value="mins">00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="field">
+          <span class="value" data-value="secs">00</span>
+          <span class="label">Seconds</span>
+        </div>
       </div>
-      <span class="colon">:</span>
-      <div class="field">
-        <span class="value" data-value="hours">00</span>
-        <span class="label">Hours</span>
-      </div>
-      <span class="colon">:</span>
-      <div class="field">
-        <span class="value" data-value="mins">00</span>
-        <span class="label">Minutes</span>
-      </div>
-      <span class="colon">:</span>
-      <div class="field">
-        <span class="value" data-value="secs">00</span>
-        <span class="label">Seconds</span>
+      <!-- ====================================================================== -->
+      <div class="timer2" id="timer-2">
+        <div class="field2">
+          <span class="value2" data-value="days2">Ан</span>
+          <span class="label2">Days</span>
+        </div>
+        <span class="colon2">:</span>
+        <div class="field2">
+          <span class="value2" data-value="hours2">ас</span>
+          <span class="label2">Hours</span>
+        </div>
+        <span class="colon2">:</span>
+        <div class="field2">
+          <span class="value2" data-value="mins2">та</span>
+          <span class="label2">Minutes</span>
+        </div>
+        <span class="colon2">:</span>
+        <div class="field2">
+          <span class="value2" data-value="secs2">сия</span>
+          <span class="label2">Seconds</span>
+        </div>
       </div>
     </div>
-    //=============================================================
-    <div class="timer2" id="timer-2">
-      <div class="field2">
-        <span class="value2" data-value="days2">Ан</span>
-        <span class="label2">Days</span>
-      </div>
-      <span class="colon2">:</span>
-      <div class="field2">
-        <span class="value2" data-value="hours2">ас</span>
-        <span class="label2">Hours</span>
-      </div>
-      <span class="colon2">:</span>
-      <div class="field2">
-        <span class="value2" data-value="mins2">та</span>
-        <span class="label2">Minutes</span>
-      </div>
-      <span class="colon2">:</span>
-      <div class="field2">
-        <span class="value2" data-value="secs2">сия</span>
-        <span class="label2">Seconds</span>
-      </div>
-    </div>
-    <div class="img-container">
-      <img src="images/обратный отсчёт.jpg" alt="обратный отсчёт" class="img" />
-    </div>
+
     <script>
       class CountdownTimer {
         constructor({ selector, targetDate }) {
@@ -72,13 +72,21 @@
           this.countTime = 0;
           this.timeInterval = null;
 
-          this.rootEl = document.querySelector(this.selector);
+          this.timerContainer = document.querySelector(this.selector);
 
           this.refs = {
-            daysField: this.rootEl.querySelector('span[data-value="days"]'),
-            hoursField: this.rootEl.querySelector('span[data-value="hours"]'),
-            minsField: this.rootEl.querySelector('span[data-value="mins"]'),
-            secsField: this.rootEl.querySelector('span[data-value="secs"]'),
+            daysField: this.timerContainer.querySelector(
+              'span[data-value="days"]'
+            ),
+            hoursField: this.timerContainer.querySelector(
+              'span[data-value="hours"]'
+            ),
+            minsField: this.timerContainer.querySelector(
+              'span[data-value="mins"]'
+            ),
+            secsField: this.timerContainer.querySelector(
+              'span[data-value="secs"]'
+            ),
           };
         }
         start() {

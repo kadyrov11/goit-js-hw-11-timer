@@ -1,8 +1,11 @@
 body {
   background-color: #000000;
 }
+.bgimg {
+  background-image: url(/images/chernyy-fon-krasnyy-cvet.jpg);
+  height: 650px;
+}
 .timer {
-  position: relative;
   display: flex;
   justify-content: center;
   width: 1200px;
@@ -20,7 +23,6 @@ body {
   border-color: aliceblue;
   border: #c4e2016d 2px solid;
   text-align: center;
-  vertical-align: center;
   padding: 15px;
 }
 
@@ -39,7 +41,6 @@ body {
 }
 /* ============================================== */
 .timer2 {
-  position: relative;
   display: flex;
   justify-content: center;
   width: 1200px;
