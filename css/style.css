@@ -2,8 +2,10 @@ body {
   background-color: #000000;
 }
 .bgimg {
-  background-image: url(/images/chernyy-fon-krasnyy-cvet.jpg);
-  height: 650px;
+  background-image: url(./images/chernyy-fon-krasnyy-cvet.jpg);
+  height: 700px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .timer {
   display: flex;
